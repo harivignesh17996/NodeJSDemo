@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  dockerwebapp1:
+    image: dockerwebapp1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8080
+
+  dockerwebapp2:
+    image: dockerwebapp2
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8081
+  
+
+
+      
